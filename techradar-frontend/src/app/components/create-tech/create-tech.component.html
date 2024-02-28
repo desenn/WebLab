@@ -1,0 +1,46 @@
+<h2>Neue Technologie erfassen</h2>
+
+<div>
+  <div class="submit-form">
+    <div>
+      <div class="form-group">
+        <label for="name"><b>Name:</b></label>
+        <input id="name" type="text" required class="form-control" ngModel="technology.name"/>
+      </div>
+
+      <div class="form-group">
+        <label for="category"><b>Kategorie:</b></label>
+        <select name="category" id="category" required class="form-control" ngModel="technology.category">
+          <option value="Frameworks">Frameworks</option>
+          <option value="Languages">Languages</option>
+          <option value="Platforms">Platforms</option>
+          <option value="Techniques">Techniques</option>
+          <option value="Tools">Tools</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="ring"><b>Ring:</b></label>
+        <select name="ring" id="ring" class="form-control" ngModel="technology.ring">
+          <option value="Adopt">Adopt</option>
+          <option value="Assess">Assess</option>
+          <option value="Hold">Hold</option>
+          <option value="Trial">Trial</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="descTech"><b>Beschreibung Technologie:</b></label>
+        <textarea id="descTech" required class="form-control" ngModel="technology.descTech"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="descClass"><b>Beschreibung Einordnung:</b></label>
+        <textarea id="descClass" class="form-control" ngModel="technology.descClass"></textarea>
+      </div>
+
+      <button class="btn btn-success" (click)="save()" [disabled]="!technology.name || !technology.category || !technology.descTech">Speichern</button>
+    </div>
+
+  </div>
+</div>
